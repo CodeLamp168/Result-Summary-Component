@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+*, *::before, *::after {
+  font-family: "Hanken Grotesk";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  body {
+    background: hsl(222deg, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .result-card {
+    display: flex;
+    gap: 1em;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.11);
+    border-radius: 30px;
+    background: white;
+  }
+  .result-card .result-area, .result-card .summary-area {
+    width: 650px;
+  }
+  .result-card .summary-area {
+    padding: 20px;
+  }
+  .result-card .result-area {
+    border-radius: inherit;
+  }
+  .result-card .result-area h2 {
+    margin-top: 0.5em;
+  }
+  .result-card .result-area h3 {
+    font-size: 30px;
+    margin-top: 3em;
+  }
+  button {
+    width: 320px;
+  }
+}
+.result-card {
+  width: auto;
+}
+.result-card .result-area, .result-card .summary-area {
+  width: 100%;
+}
+
+.result-area {
+  padding: 3vmin;
+  text-align: center;
+  background: hsl(241deg, 81%, 54%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.result-area h2, .result-area h3 {
+  font-weight: 700;
+  color: white;
+}
+.result-area h4, .result-area p {
+  color: hsl(225deg, 58%, 78%);
+}
+.result-area h4 {
+  margin-bottom: 1em;
+  font-size: 18px;
+}
+.result-area h3 {
+  margin-top: 1em;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.result-area p {
+  margin-top: 0;
+  padding-bottom: 1em;
+}
+.result-area h2 {
+  font-size: 55px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(0deg, hsla(241deg, 99%, 46%, 0), rgb(44, 1, 161));
+  padding: 35px 40px;
+  border-radius: 100px;
+  margin: 0;
+}
+.result-area h2::after {
+  content: "of 100";
+  font-size: 18px;
+  position: absolute;
+  bottom: 18px;
+  width: 100px;
+  color: hsl(225deg, 58%, 78%);
+  left: 20px;
+}
+
+.summary-area {
+  text-align: center;
+  font-weight: 800;
+  margin-top: 0.3em;
+  padding: 1vmin;
+}
+.summary-area h4 {
+  text-align: center;
+  font-size: 22px;
+  position: relative;
+}
+@media (min-width: 900px) {
+  .summary-area h4 {
+    text-align: left;
+  }
+}
+.summary-area .result-bar {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.summary-area .result-bar .result {
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: transform 300ms ease-in-out;
+}
+.summary-area .result-bar .result:hover {
+  transform: scale(1.1);
+}
+.summary-area .result-bar .result .result-header {
+  font-weight: 800;
+}
+.summary-area .result-bar .result .result-header::before {
+  padding-right: 5px;
+  margin-right: 5px;
+  align-items: center;
+  position: relative;
+  top: 2px;
+}
+.summary-area .result-bar .result .h3-data {
+  color: hsl(226deg, 13%, 53%);
+}
+.summary-area .result-bar .result .h3-data span {
+  color: black;
+}
+.summary-area button {
+  margin-top: 1em;
+  padding: 1em;
+  width: 310px;
+  border-radius: 25px;
+  border: 0px;
+  background-color: hsl(224deg, 30%, 27%);
+  border: 4px solid hsl(224deg, 30%, 27%);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.summary-area button:hover {
+  background-color: white;
+  color: hsl(224deg, 30%, 27%);
+}
+
+.reaction {
+  background: hsl(0deg, 73%, 97%);
+}
+.reaction .h3-reaction {
+  color: hsl(0deg, 100%, 67%);
+}
+.reaction .h3-reaction::before {
+  content: url(/assets/images/icon-reaction.svg);
+}
+
+.memory {
+  background: hsl(39deg, 100%, 93%);
+}
+.memory .h3-memory {
+  color: hsl(39deg, 100%, 56%);
+}
+.memory .h3-memory::before {
+  content: url(/assets/images/icon-memory.svg);
+}
+
+.verbal {
+  background: hsl(166deg, 77%, 91%);
+}
+.verbal .h3-verbal {
+  color: hsl(166deg, 100%, 37%);
+}
+.verbal .h3-verbal::before {
+  content: url(/assets/images/icon-verbal.svg);
+}
+
+.visual {
+  background: hsl(233deg, 100%, 93%);
+}
+.visual .h3-visual {
+  color: hsl(234deg, 85%, 45%);
+}
+.visual .h3-visual::before {
+  content: url(/assets/images/icon-visual.svg);
+}/*# sourceMappingURL=style.css.map */
